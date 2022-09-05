@@ -1,0 +1,2 @@
+Look at users sign-in history in AAD
+GetAADSignInHistory('<User>', <time (ex 30d)>)
