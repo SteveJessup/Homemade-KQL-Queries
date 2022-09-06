@@ -3,3 +3,8 @@
  
  AzureDiagnostics
  | where details_data_s contains ""
+ 
+ Log4shell attempt
+  AzureDiagnostics
+ | where clientIP_s contains ""
+ | where httpStatus_d == "200"
