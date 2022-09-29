@@ -1,0 +1,4 @@
+OfficeActivity
+| where TenantId has "c46e920e-7d64-4189-85c7-8ca4f8d566ea"
+| where Operation contains "Delete"
+| summarize count() by UserId
