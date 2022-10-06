@@ -7,3 +7,5 @@ AADNonInteractiveUserSignInLogs
 SigninLogs
 | where UserPrincipalName contains ""
 | project TimeGenerated, ResultType, ResultDescription, UserPrincipalName, AuthenticationRequirement, ClientAppUsed, UserAgent, IPAddress, Location
+
+| where ResultType != 0
