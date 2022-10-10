@@ -4,7 +4,7 @@ AADNonInteractiveUserSignInLogs
 | where TimeGenerated > ago(24d)
 | summarize count() by Location, UserPrincipalName, UserAgent
 
-SigninLogs
+Union SigninLogs, AADNonInteractiveUserSignInLogs
 | where UserPrincipalName contains ""
 | project TimeGenerated, ResultType, ResultDescription, UserPrincipalName, AuthenticationRequirement, ClientAppUsed, UserAgent, IPAddress, Location
 
