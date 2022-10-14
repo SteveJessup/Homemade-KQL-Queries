@@ -6,5 +6,6 @@ OfficeActivity
 OfficeActivity
 | where TenantId has ""
 | where Operation contains "Download"
+//ClientIP should be empty to see what has ip has the most Downloads. (Downloads can be changed to something else)
 | where ClientIP has ""
 | summarize count()by ClientIP
