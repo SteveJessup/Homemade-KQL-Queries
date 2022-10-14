@@ -1,3 +1,10 @@
 OfficeActivity
 | where TenantId == "TenantID"
 | project TimeGenerated, TenantId, UserAgent, RecordType, ClientIP, Client_IPAddress, Operation, OfficeWorkload
+
+
+OfficeActivity
+| where TenantId has ""
+| where Operation contains "Download"
+| where ClientIP has ""
+| summarize count()by ClientIP
