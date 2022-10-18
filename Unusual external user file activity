@@ -9,3 +9,4 @@ OfficeActivity
 //ClientIP should be empty to see what has ip has the most Downloads. (Downloads can be changed to something else)
 | where ClientIP has ""
 | summarize count()by ClientIP
+| project TimeGenerated, EventSource, OfficeObjectId, SourceFileName, UserId, Operation, UserAgent
