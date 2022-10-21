@@ -6,6 +6,6 @@ AADNonInteractiveUserSignInLogs
 
 union SigninLogs, AADNonInteractiveUserSignInLogs
 | where UserPrincipalName contains ""
-| project TimeGenerated, Category ResultType, ResultDescription, UserPrincipalName, AuthenticationRequirement, ClientAppUsed, UserAgent, IPAddress, Location
+| project TimeGenerated, Category, ResultType, ResultDescription, UserPrincipalName, AuthenticationRequirement, ClientAppUsed, UserAgent, IPAddress, Location
 
 | where ResultType != 0
