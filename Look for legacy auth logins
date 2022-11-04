@@ -1,4 +1,4 @@
-SigninLogs
+union SigninLogs, AADNonInteractiveUserSignInLogs
 | where UserAgent has "BAV2ROPC"
 | where ResultType == 0
 | project TimeGenerated, Category, ResultType, ResultDescription, UserPrincipalName, AuthenticationRequirement, ClientAppUsed, UserAgent, IPAddress, Location
