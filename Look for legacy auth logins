@@ -1,0 +1,3 @@
+SigninLogs
+| where UserAgent has "BAV2ROPC"
+| where ResultType == 0
