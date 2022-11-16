@@ -1,0 +1,2 @@
+AADManagedIdentitySignInLogs
+| where ServicePrincipalId has ""
