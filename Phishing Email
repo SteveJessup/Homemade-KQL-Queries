@@ -1,3 +1,6 @@
 EmailEvents
 | where RecipientEmailAddress has ""
 | where NetworkMessageId has ""
+
+EmailEvents
+| where SenderFromAddress has ""
