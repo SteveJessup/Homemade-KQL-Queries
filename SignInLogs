@@ -8,4 +8,8 @@ union SigninLogs, AADNonInteractiveUserSignInLogs
 | where UserPrincipalName contains ""
 | project TimeGenerated, Category, ResultType, ResultDescription, UserPrincipalName, AuthenticationRequirement, ClientAppUsed, UserAgent, IPAddress, Location
 
-| where ResultType != 0
+#check potential MFA token stealing and password
+union SigninLogs, AADNonInteractiveUserSignInLogs
+| where UserPrincipalName contains ""
+| where UserAgent contains "richclient"
+| project TimeGenerated, Category, ResultType, ResultDescription, UserPrincipalName, AuthenticationRequirement, ClientAppUsed, UserAgent, IPAddress, Location
