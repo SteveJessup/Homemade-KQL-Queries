@@ -1,0 +1,5 @@
+//Deletions in OneDrive
+OfficeActivity
+| where UserId has ""
+| where OfficeWorkload has "OneDrive"
+| where Operation has "FileRecycled"
