@@ -3,3 +3,5 @@ OfficeActivity
 | where UserId has ""
 | where OfficeWorkload has "OneDrive"
 | where Operation has "FileRecycled"
+// Pulls out all sourcefilenames too what kind of files are being deleted.
+| distinct SourceFileName
