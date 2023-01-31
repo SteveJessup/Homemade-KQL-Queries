@@ -1,0 +1,6 @@
+BehaviorAnalytics
+| where SourceIPAddress contains ""
+
+DeviceInfo
+| where DeviceName contains ""
+| where PublicIP == ""
