@@ -1,0 +1,8 @@
+EmailEvents
+| where TimeGenerated >= ago(24h)
+| join (SecurityAlert    
+//Name of the alert, multiple phising alerts 
+| where AlertName contains ""    
+| mv-expand todynamic(Entities)    
+| where Entities.Type == "mailMessage"    
+| extend Sender = tostring(Entities.Sender)) on $left.SenderFromAddress == $right.Sender
