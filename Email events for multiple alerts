@@ -1,7 +1,7 @@
 EmailEvents
 | where TimeGenerated >= ago(24h)
 | join (SecurityAlert    
-//Name of the alert, multiple phising alerts 
+//Name of the alert, multiple phising alerts etc..  
 | where AlertName contains ""    
 | mv-expand todynamic(Entities)    
 | where Entities.Type == "mailMessage"    
